@@ -1,4 +1,4 @@
-function startconnect(){
+function startConnect(){
 
     clientID = "clientID: " + parseInt(Math.random() * 100)
 
