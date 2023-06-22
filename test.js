@@ -1,6 +1,6 @@
 function startConnect(){
 
-    clientID = "klossel";
+    clientID = "clientID: " + parseInt(Math.random() * 100);
 
     host = document.getElementById("host").value;
     port = document.getElementById("port").value;
