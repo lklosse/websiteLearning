@@ -21,7 +21,7 @@ function startConnect(){
 }
 
 function onConnect(){
-    topic = document.getElementById("topic_s".value)
+    topic = document.getElementById("topic_s").value;
 
     document.getElementById("messages").innerHTML += "<span> Subscribing to topic " + topic +  "</span><br>";
 
