@@ -1,13 +1,13 @@
 function startConnect(){
 
-    clientID = "clientID: " + parseInt(Math.random() * 100);
+    clientID = "klossel";
 
     host = document.getElementById("host").value;
     port = document.getElementById("port").value;
     userId = document.getElementById("username").value;
     passwordId = document.getElementById("password").value;
 
-    document.getElementById("messages").innerHTML += "<span> Connecting to " + host + "on port " + port + "</span><br>";
+    document.getElementById("messages").innerHTML += "<span> Connecting to " + host + " on port " + port + "</span><br>";
     document.getElementById("messages").innerHTML += "<span> Using client Id " + clientID +  "</span><br>";
 
     client = new Paho.MQTT.Client(host, Number(port), clientID);
