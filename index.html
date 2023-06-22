@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8"
     <title>Data Sender</title>
 </head>
 <body>
     <form>
         <b>Hostname or IP adress and port number</b><br>
-        <input id="host" name="host" value="mqtt.hva-robots.nl">
-        <input id="port" name="port" value="1883">
+        <input id="host" name="host" type="text" value="mqtt.hva-robots.nl"><br>
+        <input id="port" name="port" type="text" value="1883"><br>
 
         <b>Username and Password</b><br>
-        <input id="username" name="username" placeholder="Username">
-        <input id="password" name="password" type="password" placeholder="Password">
+        <input id="username" name="username" type="text" placeholder="Username"><br>
+        <input id="password" name="password" type="password" placeholder="Password"><br>
 
         <b>subscription topic</b><br>
-        <input id="topic" name="topic" value="lukask/test">
+        <input id="topic" name="topic" type="text" value="lukask/test"><br>
+
+        <input type="button" value="Connect"> <br>
+        <input type="button" value="Disconnect"> <br>
 
         <b>publish topic</b><br>
-        <input id="topic_p" name="topic_p" value="" placeholder="Topic for publishing">
-        <input id="message" name="message" value="" placeholder="Message to publish">
+        <input id="topic_p" name="topic_p" value="" type="text" placeholder="Topic for publishing"><br>
+        <input id="message" name="message" value="" type="text" placeholder="Message to publish"><br>
+        <input type="button" value="Publish message">
 
     </form>
     <center> 
