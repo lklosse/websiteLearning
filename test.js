@@ -1,4 +1,4 @@
-function Startconnect(){
+function startconnect(){
 
     clientID = "clientID: " + parseInt(Math.random() * 100)
 
@@ -16,11 +16,11 @@ function Startconnect(){
     client.onMessageArrived = onMessageArrived;
 
     client.connect({
-        onSucces: OnConnect
+        onSucces: onConnect
     });
 }
 
-function OnConnect(){
+function onConnect(){
     topic = document.getElementById("topic_s".value)
 
     document.getElementById("messages").innerHTML += "<span> Subscribing to topic " + topic +  "</span><br>";
@@ -42,11 +42,11 @@ console.log("OnMessageArrived").innerHTML += "<span> Topic:" + message.destinati
 }
 
 
-function StartDisconnect(){
+function startDisconnect(){
 
 }
 
-function PublishMessage(){
+function publishMessage(){
 
 
 }
