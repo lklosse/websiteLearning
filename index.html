@@ -4,6 +4,23 @@
     <title>Data Sender</title>
 </head>
 <body>
+    <form>
+        <b>Hostname or IP adress and port number</b><br>
+        <input id="host" name="host" value="mqtt.hva-robots.nl">
+        <input id="port" name="port" value="1883">
+
+        <b>Username and Password</b><br>
+        <input id="username" name="username" placeholder="Username">
+        <input id="password" name="password" type="password" placeholder="Password">
+
+        <b>subscription topic</b><br>
+        <input id="topic" name="topic" value="lukask/test">
+
+        <b>publish topic</b><br>
+        <input id="topic_p" name="topic_p" value="" placeholder="Topic for publishing">
+        <input id="message" name="message" value="" placeholder="Message to publish">
+
+    </form>
     <center> 
     <p><h1>Besturing van de robot</h1></p>
     </center>
