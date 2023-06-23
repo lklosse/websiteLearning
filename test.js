@@ -16,7 +16,7 @@ function startConnect(){
     client.onMessageArrived = onMessageArrived;
 
     client.connect({
-        onSucces: onConnect
+        onSuccess: onConnect
     });
 }
 
