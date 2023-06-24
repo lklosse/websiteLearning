@@ -51,7 +51,7 @@ function publishMessage(){
     msg = document.getElementById("message").value;
     topic = document.getElementById("topic_p").value;
 
-    Message = new paho.MQTT.Message(message);
+    Message = new Paho.MQTT.Message(message);
     Message.destinationName = topic;
 
     client.send(Message);
