@@ -1,17 +1,7 @@
 function startConnect(){
-
-    clientID = "clientID: " + parseInt(Math.random() * 100);
-
-    host = document.getElementById("host").value;
-    port = document.getElementById("port").value;
-    userId = document.getElementById("username").value;
-    passwordId = document.getElementById("password").value;
-
-    document.getElementById("messages").innerHTML += "<span> Connecting to " + host + " on port " + port + "</span><br>";
-    document.getElementById("messages").innerHTML += "<span> Using client Id " + clientID +  "</span><br>";
-
-    client = new Paho.Client(host, clientID);
-
+    document.getElementById("messages").innerHTML += "<span> Connecting to wss://mqtt.hva-robots.nl/mqtt on port 1883 </span><br>";
+    
+    client = new Paho.Client("wss://mqtt.hva-robots.nl/mqtt", "clientID: " + parseInt(Math.random() * 100));
 
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
@@ -19,19 +9,15 @@ function startConnect(){
     client.connect({
         onSuccess: onConnect,
         onFailure: connectionFailed,
-        keepAliveInterval: 10,
-        userName : userId,
-        useSSL : true,
-        password : passwordId
+        userName : "klossel",
+        password : "HktRynjxATM0DjYZjoC7"
     });
 }
 
 function onConnect(){
-    topic = document.getElementById("topic_s").value;
+    document.getElementById("messages").innerHTML += "<span> Subscribing to topic lukask/test </span><br>";
 
-    document.getElementById("messages").innerHTML += "<span> Subscribing to topic " + topic +  "</span><br>";
-
-    client.subscribe(topic);
+    client.subscribe("lukask/test");
 }
 
 function connectionFailed(){
@@ -60,10 +46,9 @@ function startDisconnect(){
 
 function publishMessage(){
     msg = document.getElementById("message").value;
-    topic = document.getElementById("topic_p").value;
 
     Message = new Paho.Message(msg);
-    Message.destinationName = topic;
+    Message.destinationName = "lukask/test";
 
     client.send(Message);
     }
