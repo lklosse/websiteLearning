@@ -11,6 +11,7 @@ function startConnect(){
     document.getElementById("messages").innerHTML += "<span> Using client Id " + clientID +  "</span><br>";
 
     client = new Paho.Client(host, clientID);
+    client.username_pw_set(userId, passwordId);
 
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
