@@ -18,6 +18,7 @@ function startConnect(){
 
     client.connect({
         onSuccess: onConnect,
+        onFailure: connectionFailed,
         userName : userId,
         password : passwordId
     });
@@ -30,6 +31,11 @@ function onConnect(){
 
     client.subscribe(topic);
 }
+
+function connectionFailed(){
+    document.getElementById("messages").innerHTML += "<span> connection failed </span><br>";
+}
+
 
 
 function onConnectionLost(responseObject){
