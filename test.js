@@ -5,7 +5,11 @@ function startConnect(){
 
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
+    connect();
+    
+}
 
+function connect(){
     client.connect({
         onSuccess: onConnect,
         onFailure: connectionFailed,
