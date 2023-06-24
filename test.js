@@ -43,10 +43,16 @@ console.log("OnMessageArrived").innerHTML += "<span> Topic:" + message.destinati
 
 
 function startDisconnect(){
-
-}
+    client.disconnect();
+    document.getElementById("messages").innerHTML += "<span> Disconnected </span><br>";
+    }
 
 function publishMessage(){
+    msg = document.getElementById("message").value;
+    topic = document.getElementById("topic_p").value;
 
+    Message = new paho.MQTT.Message(message);
+    Message.destinationName = topic;
 
-}
+    client.send(Message);
+    }
