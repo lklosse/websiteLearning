@@ -19,7 +19,9 @@ function startConnect(){
     client.connect({
         onSuccess: onConnect,
         onFailure: connectionFailed,
+        keepAliveInterval: 10,
         userName : userId,
+        useSSL : true,
         password : passwordId
     });
 }
