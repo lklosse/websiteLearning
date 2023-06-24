@@ -10,7 +10,7 @@ function startConnect(){
     document.getElementById("messages").innerHTML += "<span> Connecting to " + host + " on port " + port + "</span><br>";
     document.getElementById("messages").innerHTML += "<span> Using client Id " + clientID +  "</span><br>";
 
-    var client = new Paho.Client(host, clientID);
+    client = new Paho.Client(host, clientID);
 
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
