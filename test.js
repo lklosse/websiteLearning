@@ -49,6 +49,7 @@ function startDisconnect(){
     }
 
 function publishMessage(){
+    connect();
     msg = document.getElementById("message").value;
 
     Message = new Paho.Message(msg);
