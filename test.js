@@ -39,7 +39,8 @@ function onConnectionLost(responseObject){
 }
 
 function onMessageArrived(message){
-console.log("OnMessageArrived").innerHTML += "<span> Topic:" + message.destinationName + "| Message: " + message.payloadString + "</span><br>"
+console.log("OnMessageArrived: " +message.payloadString);
+document.getElementById("messages").innerHTML += "<span> Topic:" + message.destinationName + "| Message: " + message.payloadString + "</span><br>"
 }
 
 
