@@ -23,13 +23,7 @@ input[type=text] {
 
     margin: 8px 0;
 }
-input[type=password] {
-  width:100%;
-    padding: 12px 12px;
-        height: 10px;
 
-    margin: 4px 2px;
-}
 input[type=button] {
     background-color: gray;
     border: none;

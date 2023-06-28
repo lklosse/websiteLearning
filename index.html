@@ -12,8 +12,11 @@
             <form id="connection information form">
                 <input type="button" onclick="startConnect()" value="Connect"> 
                 <input type="button" onclick="startDisconnect()" value="Disconnect"> <br>
-                <b>publish topic</b><br>
+                <b>choose an action</b><br><br>
                 
+                <input type="button" onclick="publishMessage(this)" value="Stand" id="stand"> <br>
+
+
                 <input id="message" name="message" value="" type="text" placeholder="Message to publish"><br>
                 <input type="button" onclick="publishMessage()" value="Publish message">
 

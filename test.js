@@ -49,10 +49,10 @@ function startDisconnect(){
     document.getElementById("messages").innerHTML += "<span> Disconnected </span><br>";
     }
 
-function publishMessage(){
+function publishMessage(elem){
     msg = document.getElementById("message").value;
 
-    Message = new Paho.Message(msg);
+    Message = new Paho.Message(elem.id);
     Message.destinationName = "klossel/test";
 
     client.send(Message);
