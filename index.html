@@ -12,9 +12,15 @@
             <form id="connection information form">
                 <input type="button" onclick="startConnect()" value="Connect"> 
                 <input type="button" onclick="startDisconnect()" value="Disconnect"> <br>
+                <hr><br>
                 <b>choose an action</b><br><br>
                 
-                <input type="button" onclick="publishMessage(this)" value="Stand" id="stand"> <br>
+                <input type="button" onclick="publishMessage(this)" value="Stand" id="stand"> 
+                <input type="button" onclick="publishMessage(this)" value="Sit" id="sit"> 
+                <input type="button" onclick="publishMessage(this)" value="Crouch" id="crouch"> 
+                <input type="button" onclick="publishMessage(this)" value="Relax" id="relax"> 
+                <input type="button" onclick="publishMessage(this)" value="Lay on belly" id="layOnBelly"> 
+                <input type="button" onclick="publishMessage(this)" value="Lay on back" id="layOnBack"> 
 
 
                 <input id="message" name="message" value="" type="text" placeholder="Message to publish"><br>
