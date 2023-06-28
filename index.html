@@ -10,20 +10,9 @@
     <body>
         <div class="wrapper">
             <form id="connection information form">
-                <b>Hostname or IP adress and port number</b><br>
-                <input id="host" name="host" type="text" value="wss://mqtt.hva-robots.nl/mqtt"><br>
-                
-                <input id="port" name="port" type="text" value="1883"><br>
-                <b>Username and Password</b><br>
-                <input id="username" name="username" type="text" placeholder="klossel"><br>
-                
-                <input id="password" name="password" type="password" placeholder="HktRynjxATM0DjYZjoC7"><br>
-                <b>subscription topic</b><br>
-                <input id="topic_s" name="topic_s" type="text" value="lukask/test"><br><br>
                 <input type="button" onclick="startConnect()" value="Connect"> 
                 <input type="button" onclick="startDisconnect()" value="Disconnect"> <br>
                 <b>publish topic</b><br>
-                <input id="topic_p" name="topic_p" value="" type="text" placeholder="Topic for publishing"><br>
                 
                 <input id="message" name="message" value="" type="text" placeholder="Message to publish"><br>
                 <input type="button" onclick="publishMessage()" value="Publish message">
