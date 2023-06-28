@@ -19,9 +19,9 @@ function connect(){
 }
 
 function onConnect(){
-    document.getElementById("messages").innerHTML += "<span> Subscribing to topic lukask/test </span><br>";
+    document.getElementById("messages").innerHTML += "<span> Subscribing to topic klossel/test </span><br>";
 
-    client.subscribe("lukask/test");
+    client.subscribe("klossel/test");
 }
 
 function connectionFailed(){
@@ -53,7 +53,7 @@ function publishMessage(){
     msg = document.getElementById("message").value;
 
     Message = new Paho.Message(msg);
-    Message.destinationName = "lukask/test";
+    Message.destinationName = "klossel/test";
 
     client.send(Message);
     }
