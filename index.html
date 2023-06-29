@@ -22,13 +22,11 @@
                 <input type="button" onclick="publishMessage(this)" value="Lay on belly" id="layOnBelly"> 
                 <input type="button" onclick="publishMessage(this)" value="Lay on back" id="layOnBack"> 
                 <br><br>
-                <input type="button" onclick="publishMessage(this)" value="Wave" id="wave"> 
+
+                <input id="stepsF" name="stepsForward" value="" type="text" placeholder="How many meters should I walk forward?"><br>
+                <input id="stepsS" name="stepsSideways" value="" type="text" placeholder="How many meters should I walk sideways? (positive values for left, negative for right)"><br>
+                <input id="turnD" name="turnDegrees" value="" type="text" placeholder="how many degrees should I turn? (counter-clockwise)"><br>
                 <input type="button" onclick="publishMessage(this)" value="Walk" id="walk"> 
-
-
-
-                <input id="message" name="message" value="" type="text" placeholder="How many steps"><br>
-                <input type="button" onclick="publishMessage()" value="Publish message">
 
             </form>
             <div id="messages"></div>
