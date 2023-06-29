@@ -59,8 +59,7 @@ input[type=button]:hover {
     overflow: scroll;
 }
 #messages span {
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow: auto;
-    display: flex;
-    flex-direction: column-reverse;
+ 
 }
