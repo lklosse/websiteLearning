@@ -45,6 +45,7 @@ document.getElementById("messages").innerHTML += "<span> Topic: " + message.dest
 
 
 function startDisconnect(){
+    publishMessage("shutdown")
     client.disconnect();
     document.getElementById("messages").innerHTML += "<span> Disconnected </span><br>";
     }
