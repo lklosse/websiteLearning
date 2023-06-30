@@ -59,7 +59,7 @@ function publishMessage(elem){
         stepsForward = document.getElementById("stepsF").value;
         stepsSideways = document.getElementById("stepsS").value;
         turnDegrees = document.getElementById("turnD").value;
-        Message = new Paho.Message(elem.id + " " + stepsForward + " " + stepsSideways + " " + turnDegrees);
+        Message = new Paho.Message(elem.id + " x=" + stepsForward + " y=" + stepsSideways + " turn=" + turnDegrees);
 
     } else {
     Message = new Paho.Message(elem.id);
