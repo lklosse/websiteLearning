@@ -56,8 +56,8 @@ function startDisconnect(){
 function publishMessage(elem){
     if(elem.id = "walk"){
         stepsForward = document.getElementById("stepsF").value;
-        stepsForward = document.getElementById("stepsF").value;
-        turnDegrees = document.getElementById("stepsF").value;
+        stepsSideways = document.getElementById("stepsS").value;
+        turnDegrees = document.getElementById("turnD").value;
         Message = new Paho.Message(elem.id + " " + stepsForward + " " + stepsSideways + " " + turnDegrees);
 
     } else {
