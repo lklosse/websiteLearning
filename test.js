@@ -54,24 +54,17 @@ function startDisconnect(){
     }
 
 function publishMessage(elem){
+    if(elem.id = "walk"){
+        stepsForward = document.getElementById("stepsF").value;
+        stepsForward = document.getElementById("stepsF").value;
+        turnDegrees = document.getElementById("stepsF").value;
+        Message = new Paho.Message(elem.id + " " + stepsForward + " " + stepsSideways + " " + turnDegrees);
+
+    } else {
     Message = new Paho.Message(elem.id);
+
+    }
+    
     Message.destinationName = "klossel/test";
     client.send(Message);
-
-    if(elem.id = "walk"){
-        sleep(1000);
-        stepsForward = document.getElementById("stepsF").value;
-        Paho.Message(stepsForward).destinationName = "klossel/test";
-        client.send(Paho.Message(stepsForward));
-
-        sleep(1000);
-        stepsSideways = document.getElementById("stepsS").value;
-        Paho.Message(stepsSideways).destinationName = "klossel/test";
-        client.send(Paho.Message(turnDegrees));
-        
-        sleep(1000);
-        turnDegrees = document.getElementById("stepsF").value;
-        Paho.Message(turnDegrees).destinationName = "klossel/test";
-        client.send(Paho.Message(turnDegrees));
-    } 
 }
